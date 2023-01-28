@@ -15,16 +15,16 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       let exercisesData = [];
 
       if (bodyPart === 'all') {
-        exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+        exercisesData = await fetchData(' https://api-ninjas.com/api/exercises/exercises', exerciseOptions);
       } else {
-        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+        exercisesData = await fetchData(`https://api-ninjas.com/api/exercises/bodyPart/${bodyPart}`, exerciseOptions);
       }
 
       setExercises(exercisesData);
     };
 
     fetchExercisesData();
-  }, {bodyPart}
+  }
   );
 
   // Pagination
